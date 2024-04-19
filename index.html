@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="media-queries.css">
+    <link rel="stylesheet" href="styles.css" />
+    <title>Guess My Number</title>
+  </head>
+  <body>
+    <div class="container">
+      <main class="main-container">
+        <section class="section-description">
+          <h1 class="heading-primary">Guess My Number!</h1>
+
+          <div class="header-box">
+            <h2 class="heading-secondary">Instructions</h2>
+            <svg class="icon svg-icon center-icon">
+              <use xlink:href="img/sprite.svg#icon-open-book"></use>
+            </svg>
+          </div>
+          <div class="paragraph">
+            <p class="paragraph-text">
+              This game is about trying to guess a hidden number between 1 and
+              20 and achieve it with the fewest attempts possible. You can make
+              up to 20 attempts, less attempts concludes in higher final score.
+              Try your best and enjoy. Good luck!
+            </p>
+            <svg class="icon svg-icon">
+              <use xlink:href="img/sprite.svg#icon-emoji-flirt"></use>
+            </svg>
+          </div>
+          <button class="btn btn-new">New Game</button>
+        </section>
+
+        <section class="section-game">
+          <div class="guess-box">
+            <p class="guess-box-number">?</p>
+          </div>
+
+          <p class="guess-text">Start guessing...</p>
+          <div class="checkbox">
+            <input type="number" class="checkbox-input" />
+            <button class="btn btn-check">Check</button>
+          </div>
+          <div class="scores-box">
+            <p class="scores-box-score">
+              <svg class="icon svg-icon">
+                <use xlink:href="img/sprite.svg#icon-game-controller"></use>
+              </svg>
+              Score: <span class="score">20</span>
+            </p>
+            <p class="scores-box-highscore">
+              <svg class="icon svg-icon">
+                <use xlink:href="img/sprite.svg#icon-medal"></use>
+              </svg>
+              Highscore: <span class="highscore">0</span>
+            </p>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="footer-text-box">
+          <p class="footer-text">
+         Made with 💚 by <span class="author">Nwntas Papamichael</span>
+         <p class="credits">My version of the Guess my number! project from Jonas Schmedtmann course:</p>
+         <a href="https://www.udemy.com/course/the-complete-javascript-course/" class="teachers-link">The Complete JavaScript Course 2020: From Zero to Expert!</a>
+        </div>
+       <ul class="socials-box">
+        <li class="socials-box-item">
+          <a href="https://www.facebook.com/nwntas.papamichael/?locale=el_GR" target="_blank" class="socials-box-link">
+            <svg class="icon svg-icon">
+              <use xlink:href="img/sprite.svg#icon-facebook"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials-box-item">
+          <a href="https://www.instagram.com/nwntas_papamichael/?next=%2F" target="_blank" class="socials-box-link">
+            <svg class="icon svg-icon">
+              <use xlink:href="img/sprite.svg#icon-instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="socials-box-item">
+          <a href="https://github.com/nwntaspap" target="_blank" class="socials-box-link">
+            <svg class="icon svg-icon">
+              <use xlink:href="img/sprite.svg#icon-github"></use>
+            </svg>
+          </a>
+        </li>
+       </ul>
+        </p>
+      </footer>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

@@ -3,10 +3,34 @@ let secretNumber = Math.trunc(Math.random() * 20) + 1;
 let score = 20;
 let highscore = 0;
 
-const initializeGame = () => {
-
-};
-
+const init = function() {
+  score = 20;
+  document.querySelector(".score").textContent = score;
+  document.querySelector(".checkbox-input").value = "";
+  updateTextContent(".guess-text", "Start guessing...");
+  document.querySelector(".guess-box-number").textContent = "?";
+  // style changes
+  document.querySelector("body").style.backgroundColor = "#51cf66";
+  document.querySelector(".section-description").style.backgroundColor =
+    "#fff3bf";
+  document.querySelector(".section-game").style.backgroundColor = "#ffec99";
+  document.querySelector(".guess-box").style.backgroundColor = "#40c057";
+  document.querySelector(".guess-box").style.color = "#fff";
+  document.querySelector(".guess-text").style.color = "#333";
+  document.querySelector(".scores-box").style.color = "#333";
+  document.querySelector(".icon").style.fill = "#333";
+  document.querySelector(".heading-primary").style.color = "#69db7c";
+  document.querySelector(".heading-secondary").style.color = "#333";
+  document.querySelector(".paragraph").style.backgroundColor = "#fff";
+  document.querySelector(".paragraph-text").style.color = "#333";
+  document.querySelector(".btn-new").style.backgroundColor = "#51cf66";
+  document.querySelector(".btn-new").style.border = "#51cf66";
+  document.querySelector(".btn-new").style.color = "#333";
+  document.querySelector(".btn-check").style.backgroundColor = "#51cf66";
+  document.querySelector(".btn-check").style.border = "#51cf66";
+  document.querySelector(".btn-check").style.color = "#333";
+  document.querySelector(".footer").style.backgroundColor = "#fff3bf";
+}
 
 const updateTextContent = (selector, content) => {
   document.querySelector(selector).textContent = content;
@@ -70,35 +94,12 @@ document.querySelector(".btn-check").addEventListener("click", function () {
 });
 
 // Reset
-document.querySelector(".btn-new").addEventListener("click", function () {
-  score = 20;
-  document.querySelector(".score").textContent = score;
-  document.querySelector(".checkbox-input").value = "";
-  updateTextContent(".guess-text", "Start guessing...");
-  document.querySelector(".guess-box-number").textContent = "?";
-  // style changes
-  document.querySelector("body").style.backgroundColor = "#51cf66";
-  document.querySelector(".section-description").style.backgroundColor =
-    "#fff3bf";
-  document.querySelector(".section-game").style.backgroundColor = "#ffec99";
-  document.querySelector(".guess-box").style.backgroundColor = "#40c057";
-  document.querySelector(".guess-box").style.color = "#fff";
-  document.querySelector(".guess-text").style.color = "#333";
-  document.querySelector(".scores-box").style.color = "#333";
-  document.querySelector(".icon").style.fill = "#333";
-  document.querySelector(".heading-primary").style.color = "#69db7c";
-  document.querySelector(".heading-secondary").style.color = "#333";
-  document.querySelector(".paragraph").style.backgroundColor = "#fff";
-  document.querySelector(".paragraph-text").style.color = "#333";
-  document.querySelector(".btn-new").style.backgroundColor = "#51cf66";
-  document.querySelector(".btn-new").style.border = "#51cf66";
-  document.querySelector(".btn-new").style.color = "#333";
-  document.querySelector(".btn-check").style.backgroundColor = "#51cf66";
-  document.querySelector(".btn-check").style.border = "#51cf66";
-  document.querySelector(".btn-check").style.color = "#333";
-  document.querySelector(".footer").style.backgroundColor = "#fff3bf";
-});
+document.querySelector(".btn-new").addEventListener("click", init);
 
+// Reset with Escape Button
+document.addEventListener('keydown', function(e) {
+  if(e.key === 'Escape') init()
+})
 // quicker way to reset but i dont want highscore reset
 // document.querySelector(".btn-new").addEventListener("click", function () {
 //   location.reload();

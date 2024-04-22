@@ -171,6 +171,11 @@ body {
   align-self: center;
   padding: 1rem;
   fill: var(--gray-dark);
+  transition: all 0.3s;
+}
+
+.icon:hover {
+  transform: translateY(-3px) scale(1.1);
 }
 
 /* Section description */
@@ -290,6 +295,7 @@ body {
 .teachers-link:hover,
 .teachers-link:active {
   border-bottom: 1px solid var(--primary-color-light--1);
+  transform: translateY(-3px);
 }
 
 /* Socials */
